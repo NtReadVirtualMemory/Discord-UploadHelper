@@ -4,6 +4,7 @@ import requests
 from io import BytesIO
 import time
 import os
+from keep_alive import keep_alive
 
 # Bot setup
 intents = discord.Intents.default()
@@ -123,4 +124,5 @@ async def on_message(message):
 
 TOKEN = os.environ.get("TOKEN")
 
+keep_alive()
 bot.run(TOKEN)
