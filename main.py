@@ -16,7 +16,7 @@ intents.voice_states = True
 bot = commands.Bot(command_prefix="!", intents=intents)
 
 # Configure IDs
-ROLE_ID = os.environ.get("PermissionRoleId") 
+ROLE_ID = int(os.environ.get("PermissionRoleId"))
 
 
 @bot.event
